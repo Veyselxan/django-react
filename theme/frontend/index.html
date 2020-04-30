@@ -1,0 +1,13 @@
+{% extends 'frontend/base.html' %}
+{% load static %}
+{% block meta %}
+  <meta name="description" content="Free Web tutorials">
+
+{% endblock %}
+{% block content %}
+<ul>
+    {% for blog in blogs %}
+        <li><a href="{% url 'frontend:detal' blog.slug %}">{{ blog.title }}</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}
